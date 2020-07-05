@@ -1,12 +1,12 @@
 import React from 'react';
 import { TodoListItem } from './TodoListItem';
 
+type Todo = {
+  text: string;
+  complete: boolean;
+};
 
-type todo = {
-  text: string,
-  complete: boolean,
-}
-const todos = [
+const todos : Array<Todo>= [
   {text: "Walk the Dog", complete: true},
   {text: "Do Homework", complete: false}
 ];
@@ -14,7 +14,11 @@ const todos = [
 function App() {
   
   return(
-    <TodoListItem/>
+    <React.Fragment>
+      <TodoListItem todo={todos[0]}/>
+      <TodoListItem todo={todos[1]}/>
+    </React.Fragment>
+      
   )
 }
 
