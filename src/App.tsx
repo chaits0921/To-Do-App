@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { TodoListItem } from './TodoListItem';
-
+import {TodoList} from "./TodoList"
 type Todo = {
   text: string;
   complete: boolean;
@@ -31,8 +30,7 @@ function App() {
   
   return(
     <React.Fragment>
-      <TodoListItem todo={todos[0]} toggleTodo={toggleTodo}/>
-      <TodoListItem todo={todos[1]} toggleTodo={toggleTodo}/>
+      <TodoList todos={todos} toggleTodo={toggleTodo}/>
     </React.Fragment>
       
   )
